@@ -1,11 +1,11 @@
 $.getJSON("ajax-4.json", function(data) {
     var items = [];
     $.each(data, function(key, val) {
-        items.push("<li id='" + key + "'>" + val + "</li>");
+        items.push("<p id='" + key + "'>" + val + "</p>");
     });
 
-    $("<ul/>", {
-        "class": "my-new-list",
+    $("<div/>", {
+        "class": "my-new-div",
         html: items.join("")
     }).appendTo("body");
 });
