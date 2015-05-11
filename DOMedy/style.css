@@ -1,0 +1,120 @@
+html {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: helvetica;
+    -webkit-animation-name: door;
+    /* Chrome, Safari, Opera */
+    
+    -webkit-animation-duration: 40s;
+    /* Chrome, Safari, Opera */
+    
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: color;
+    animation: color 40s linear infinite;
+}
+
+@-webkit-keyframes door {
+    from, to {
+        background-color: lightgreen;
+    }
+    33% {
+        background-color: rgb(253, 111, 111);
+    }
+    66% {
+        background-color: cyan;
+    }
+}
+
+@-webkit-keyframes color {
+    from, to {
+        background-color: rgb(17, 178, 131);
+    }
+    33% {
+        background-color: rgb(198, 98, 98);
+    }
+    66% {
+        background-color: rgb(62, 102, 115)
+    }
+}
+
+.animation {
+    -webkit-animation: example 2s ease 0s 1 alternate;
+}
+
+@-webkit-keyframes example {
+    from {
+        -webkit-transform: perspective(700) rotateY(0deg);
+        -webkit-transform-origin: 0% 0%;
+    }
+    to {
+        -webkit-transform: perspective(700) rotateY(-90deg);
+        -webkit-transform-origin: 0% 0%;
+    }
+}
+
+#left {
+    width: 320px;
+    height: 500px;
+    cursor: pointer;
+    background: rgb(96, 52, 37);
+    margin: auto;
+    margin-top: 40px;
+    padding-top: 50px;
+    position: relative;
+}
+
+#indicator {
+    border-radius: 5px;
+    left: 80%;
+    top: 45%;
+    width: 30px;
+    height: 4px;
+    background: red;
+    position: absolute;
+    z-index: 1;
+}
+
+#nob {
+    cursor: pointer;
+    border-radius: 15px;
+    left: 80%;
+    top: 47%;
+    width: 30px;
+    height: 30px;
+    background: yellow;
+    position: absolute;
+    z-index: 1;
+    box-shadow: -3px -4px 0px rgb(197, 197, 70) inset;
+}
+
+#sign {
+    -webkit-animation-name: color;
+    /* Chrome, Safari, Opera */
+    
+    -webkit-animation-duration: 40s;
+    /* Chrome, Safari, Opera */
+    
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.5em;
+    padding: 0.4px;
+    text-align: center;
+    color: white;
+    background-color: rgb(50, 50, 50);
+    width: 62%;
+    height: 34%;
+    margin: auto;
+    box-shadow: 8px 8px 0px rgb(58, 29, 19) inset;
+}
+
+#joke p {
+    font-size: 3em;
+    text-align: center;
+    display: none;
+}
